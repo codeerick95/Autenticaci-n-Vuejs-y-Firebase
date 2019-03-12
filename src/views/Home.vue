@@ -1,18 +1,30 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <template v-if="currentUser">
+      <navbar></navbar>
+      <dashboard></dashboard>
+    </template>
+    <auth v-else></auth>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// import HelloWorld from '@/components/HelloWorld.vue'
+import Navbar from "../components/Navbar";
+import Dashboard from "@/components/Dashboard.vue";
+import Auth from "@/components/auth/Auth.vue";
+import { mapState } from "vuex";
 
 export default {
-  name: 'home',
+  name: "home",
+  computed: {
+    ...mapState(["currentUser", "userProfile"])
+  },
   components: {
-    HelloWorld
+    Navbar,
+    Dashboard,
+    Auth
   }
-}
+};
 </script>
