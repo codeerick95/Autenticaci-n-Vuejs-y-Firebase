@@ -3,12 +3,12 @@ import 'firebase/firestore'
 
 // firebase init goes here
 const config = {
-    apiKey: "AIzaSyBaBjeXRfBsVrjmoFl6wKnAXlnJmaY0G4o",
-    authDomain: "vue-social-network-b49da.firebaseapp.com",
-    databaseURL: "https://vue-social-network-b49da.firebaseio.com",
-    projectId: "vue-social-network-b49da",
-    storageBucket: "vue-social-network-b49da.appspot.com",
-    messagingSenderId: "641009905873"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: ""
 };
 firebase.initializeApp(config)
 
